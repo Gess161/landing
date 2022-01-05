@@ -19,3 +19,37 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("/fonts/NotoSans/NotoSans-Regular.ttf");
+  font-style: normal;
+  font-weight: 400
+}
+
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("/fonts/NotoSans/NotoSans-Bold.ttf");
+  font-style: bold;
+  font-weight: 700
+}
+
+@font-face {
+  font-family: "Playfair-Display";
+  src: url("/fonts/PlayfaitDisplay/PlayfairDisplay-Regular.ttf");
+  font-style: normal;
+  font-weight: 400
+}
+@font-face {
+  font-family: "Playfair-Display";
+  src: url("/fonts/PlayfaitDisplay/PlayfairDisplay-Medium.ttf");
+  font-style: medium;
+  font-weight: 500
+}
+@font-face {
+  font-family: "Playfair-Display";
+  src: url("/fonts/PlayfaitDisplay/PlayfairDisplay-Bold.ttf");
+  font-style: bold;
+  font-weight: 700
+}
+
