@@ -4,12 +4,13 @@ import Content from "./Content";
 
 const ContentCard = (props) => {
     const { image, tagline, heading, text, count, direction } = props;
-    console.log(direction)
     return (
         <Box
             height="720px"
-            width="100%"
+            width="76.2%"
             display="flex"
+            justifySelf="center"
+            m="0 auto"
             mb="200px"
             flexDirection={direction | "row"}
         >

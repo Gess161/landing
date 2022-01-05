@@ -35,21 +35,21 @@ const Content = (props) => {
                     mr={4}
                     backgroundColor={theme.palette.secondary.main}
                 />
-                <Typography variant="body1" color={theme.palette.secondary.main} sx={{ textTransform: "uppercase", height: "100%" }}> {tagline} </Typography>
+                <Typography variant="h6" color={theme.palette.secondary.main}> {tagline} </Typography>
             </Box>
             <Box
                 display="flex"
                 padding="27px 0"
                 maxWidth="500px"
             >
-                <Typography color={theme.palette.primary.main} variant="h1">{heading}</Typography>
+                <Typography color={theme.palette.primary.main} variant="h2">{heading}</Typography>
             </Box>
             <Box
                 display="flex"
                 pb="27px"
                 maxWidth="500px"
             >
-                <Typography color={theme.palette.primary.main} variant="body1">{text}</Typography>
+                <Typography lineHeight="32px" color={theme.palette.primary.main} variant="body1">{text}</Typography>
             </Box>
             <Box
                 display="flex"
