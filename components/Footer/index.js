@@ -10,6 +10,8 @@ export default function Footer() {
         <Box
             display="flex"
             flexDirection="row"
+            width="76.2%"
+            m="0 auto"
         >
             <Box
                 display="flex"
@@ -30,7 +32,7 @@ export default function Footer() {
             <Box
                 display="flex"
                 flex={1}
-                justifyContent="space-around"
+                justifyContent="space-between"
             >
                 <MoreOn text={"The Blog"} items={blog} />
                 <MoreOn text={"MNTN"} items={mntn} />

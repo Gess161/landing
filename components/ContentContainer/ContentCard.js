@@ -4,6 +4,7 @@ import Content from "./Content";
 
 const ContentCard = (props) => {
     const { image, tagline, heading, text, count, direction } = props;
+
     return (
         <Box
             height="720px"
@@ -12,7 +13,7 @@ const ContentCard = (props) => {
             justifySelf="center"
             m="0 auto"
             mb="200px"
-            flexDirection={direction | "row"}
+            flexDirection={direction}
         >
             <Box
                 display="flex"

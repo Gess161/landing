@@ -57,7 +57,8 @@ const Content = (props) => {
             >
                 <Button
                     variant="text"
-                    sx={{ 
+                    sx={{
+                        p: 0,
                         textTransform: "none",
                         "&:hover": {
                             backgroundColor: theme.palette.background.default

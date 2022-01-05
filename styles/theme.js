@@ -31,7 +31,6 @@ const theme = createTheme({
       fontWeight: 800,
       letterSpacing: "6px",
       textTransform: "uppercase",
-      fontFamily: "Noto-Sans",
       fontSize: "18px"
     },
     body1: {
