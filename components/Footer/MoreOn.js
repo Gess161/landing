@@ -12,7 +12,7 @@ export default function MoreOn(props) {
             </Box>
             <Box>
                 {items.map(item => {
-                    return (<MoreOnItem item={item} />)
+                    return (<MoreOnItem key={item} item={item} />)
                 })}
             </Box>
         </Box>

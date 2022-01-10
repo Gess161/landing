@@ -14,10 +14,12 @@ const ContentCard = (props) => {
             m="0 auto"
             mb="200px"
             flexDirection={direction}
+            zIndex={10}
         >
             <Box
                 display="flex"
                 flex={2}
+                zIndex={10}
             >
                 <Content
                     tagline={tagline}
@@ -29,6 +31,7 @@ const ContentCard = (props) => {
             <Box
                 display="flex"
                 flex={1}
+                zIndex={10}
 
             >
                 <Image src={image} height="100%" width="565px" />

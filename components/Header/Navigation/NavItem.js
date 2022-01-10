@@ -1,14 +1,13 @@
 import { Box, Link } from "@mui/material";
 import { useTheme } from "@mui/material";
 
-export default function MoreOnItem(props) {
+export default function NavItem(props) {
     const { item } = props;
     const theme = useTheme();
     return (
         <Box
-            mt={4}
         >
-            <Link href="#" underline="hover" variant="body1" color={theme.palette.primary.main}>
+            <Link href="#" underline="hover" variant="body1" color={theme.palette.primary.main} sx={{ fontWeigth: 700 }}>
                 {item}
             </Link>
         </Box>

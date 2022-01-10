@@ -11,7 +11,9 @@ export default function Footer() {
             display="flex"
             flexDirection="row"
             width="76.2%"
+            pb={10}
             m="0 auto"
+            zIndex={10}
         >
             <Box
                 display="flex"

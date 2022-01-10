@@ -1,5 +1,7 @@
 import { Box, Typography, useTheme, Button } from "@mui/material"
 import Image from "next/image";
+import Heading from "./Heading";
+import Tagline from "./Tagline";
 
 const Content = (props) => {
     const { tagline, heading, text, count } = props;
@@ -22,28 +24,8 @@ const Content = (props) => {
             >
                 {count}
             </Box>
-            <Box
-                display="flex"
-                flexDirection="row"
-                height="22px"
-                alignItems="center"
-            >
-                <Box
-                    display="flex"
-                    width="72px"
-                    height="2px"
-                    mr={4}
-                    backgroundColor={theme.palette.secondary.main}
-                />
-                <Typography variant="h6" color={theme.palette.secondary.main}> {tagline} </Typography>
-            </Box>
-            <Box
-                display="flex"
-                padding="27px 0"
-                maxWidth="500px"
-            >
-                <Typography color={theme.palette.primary.main} variant="h2">{heading}</Typography>
-            </Box>
+            <Tagline text={tagline} />
+            <Heading text={heading} />
             <Box
                 display="flex"
                 pb="27px"
@@ -60,9 +42,8 @@ const Content = (props) => {
                     sx={{
                         p: 0,
                         textTransform: "none",
-                        "&:hover": {
-                            backgroundColor: theme.palette.background.default
-                        }
+                        ".MuiButton-endIcon": { ml: 2 },
+                        "&:hover": { backgroundColor: theme.palette.background.default }
                     }}
                     color="secondary"
                     mr={1}

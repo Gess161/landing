@@ -5,7 +5,9 @@ export default function Logo(props) {
     const { text } = props;
     const theme = useTheme()
     return (
-        <Box>
+        <Box
+        zIndex="10"
+        >
             <Typography color={theme.palette.primary.main}  fontFamily="Playfair-Display" fontSize="32px">
                 {text}
             </Typography>
