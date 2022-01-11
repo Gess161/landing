@@ -1,24 +1,21 @@
 import { IconButton, Box, Typography } from "@mui/material";
 import Image from "next/image";
 
-
-
 export default function Socials() {
     return (
         <Box
-            position="fixed"
-            left="-4%"
-            top="55%"
-            display="flex"
-            flexDirection="row"
-            justifyContent="space-between"
-            alignItems="center"
-            maxWidth="300px"
-            width="100%"
-            zIndex={10}
-
             sx={{
-                transform: "rotate(90deg)"
+                position: "fixed",
+                left: "-4%",
+                top: "55%",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+                maxWidth: "300px",
+                width: "100%",
+                zIndex: 10,
+                transform: "rotate(90deg)",
             }}
         >
             <Typography color="primary" variant="body1">Follow us</Typography>

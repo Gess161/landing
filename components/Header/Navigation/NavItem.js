@@ -5,8 +5,7 @@ export default function NavItem(props) {
     const { item } = props;
     const theme = useTheme();
     return (
-        <Box
-        >
+        <Box>
             <Link href="#" underline="hover" variant="body1" color={theme.palette.primary.main} sx={{ fontWeigth: 700 }}>
                 {item}
             </Link>

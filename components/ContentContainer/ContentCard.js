@@ -7,16 +7,16 @@ const ContentCard = (props) => {
 
     return (
         <Box
-            width="80%"
-            display="flex"
-            justifySelf="center"
-            minHeight="720px"
-            justifyContent={direction === "row" ? "flex-start" : "flex-end"}
-            m="0 auto"
-            mb="200px"
-            flexDirection={direction}
-            zIndex={10}
             sx={{
+                width: "80%",
+                display: "flex",
+                justifySelf: "center",
+                minHeight: "720px",
+                justifyContent: direction === "row" ? "flex-start" : "flex-end",
+                m: "0 auto",
+                mb: "200px",
+                flexDirection: direction,
+                zIndex: 10,
                 "@media(max-width: 1180px)": {
                     flexDirection: "column",
                     height: "1400px",
@@ -29,8 +29,8 @@ const ContentCard = (props) => {
                 width="61%"
                 zIndex={10}
                 justifyContent="center"
-                sx={mediaText}
                 pl={direction === "row" ? 0 : 8}
+                sx={mediaText}
             >
                 <Content
                     tagline={tagline}

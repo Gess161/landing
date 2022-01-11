@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import theme from '../styles/theme'
 import { Box, ThemeProvider } from '@mui/system'
-import ContentCard from '../components/ContentContainer/ContentCard'
 import Footer from '../components/Footer'
 import Background from '../components/Background'
 import Header from '../components/Header'

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import NavItem from "./Navigation/NavItem";
 import { Box } from "@mui/material";
 import AccountMenu from "./AccountMenu";
 

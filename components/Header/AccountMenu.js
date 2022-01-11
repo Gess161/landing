@@ -10,91 +10,91 @@ import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/system';
 
 export default function MenuListComposition() {
-  const theme = useTheme()
-  const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef(null);
-  const styles = {
-    fontSize: "14px",
-    color: theme.palette.primary.main
-  }
-
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
-
-  const handleClose = (event) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
+    const theme = useTheme()
+    const [open, setOpen] = React.useState(false);
+    const anchorRef = React.useRef(null);
+    const styles = {
+        fontSize: "14px",
+        color: theme.palette.primary.main
     }
-    setOpen(false);
-  };
 
-  function handleListKeyDown(event) {
-    if (event.key === 'Tab') {
-      event.preventDefault();
-      setOpen(false);
-    } else if (event.key === 'Escape') {
-      setOpen(false);
+    const handleToggle = () => {
+        setOpen((prevOpen) => !prevOpen);
+    };
+
+    const handleClose = (event) => {
+        if (anchorRef.current && anchorRef.current.contains(event.target)) {
+            return;
+        }
+        setOpen(false);
+    };
+
+    function handleListKeyDown(event) {
+        if (event.key === 'Tab') {
+            event.preventDefault();
+            setOpen(false);
+        } else if (event.key === 'Escape') {
+            setOpen(false);
+        }
     }
-  }
 
-  const prevOpen = React.useRef(open);
-  React.useEffect(() => {
-    if (prevOpen.current === true && open === false) {
-      anchorRef.current.focus();
-    }
-    prevOpen.current = open;
-  }, [open]);
+    const prevOpen = React.useRef(open);
+    React.useEffect(() => {
+        if (prevOpen.current === true && open === false) {
+            anchorRef.current.focus();
+        }
+        prevOpen.current = open;
+    }, [open]);
 
-  return (
-    <Stack direction="row" spacing={2}>
-      <div>
-        <Button
-          sx={{textTransform: 'none', fontWeight: 700}}
-          ref={anchorRef}
-          id="composition-button"
-          aria-controls={open ? 'composition-menu' : undefined}
-          aria-expanded={open ? 'true' : undefined}
-          aria-haspopup="true"
-          onClick={handleToggle}
-        >
-          Account
-        </Button>
-        <Popper
-          sx={{textTransform: 'none', fontSize: "14px"}}
-          open={open}
-          anchorEl={anchorRef.current}
-          role={undefined}
-          placement="bottom-start"
-          transition
-          disablePortal
-        >
-          {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              style={{
-                transformOrigin:
-                  placement === 'bottom-start' ? 'left top' : 'left bottom',
-              }}
-            >
-              <Paper>
-                <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList
-                    autoFocusItem={open}
-                    id="composition-menu"
-                    aria-labelledby="composition-button"
-                    onKeyDown={handleListKeyDown}
-                  >
-                    <MenuItem sx={styles} onClick={handleClose}>Profile</MenuItem>
-                    <MenuItem sx={styles} onClick={handleClose}>Settings</MenuItem>
-                    <MenuItem sx={styles} onClick={handleClose}>Logout</MenuItem>
-                  </MenuList>
-                </ClickAwayListener>
-              </Paper>
-            </Grow>
-          )}
-        </Popper>
-      </div>
-    </Stack>
-  );
+    return (
+        <Stack direction="row" spacing={2}>
+            <div>
+                <Button
+                    sx={{ textTransform: 'none', fontWeight: 700 }}
+                    ref={anchorRef}
+                    id="composition-button"
+                    aria-controls={open ? 'composition-menu' : undefined}
+                    aria-expanded={open ? 'true' : undefined}
+                    aria-haspopup="true"
+                    onClick={handleToggle}
+                >
+                    Account
+                </Button>
+                <Popper
+                    sx={{ textTransform: 'none', fontSize: "14px" }}
+                    open={open}
+                    anchorEl={anchorRef.current}
+                    role={undefined}
+                    placement="bottom-start"
+                    transition
+                    disablePortal
+                >
+                    {({ TransitionProps, placement }) => (
+                        <Grow
+                            {...TransitionProps}
+                            style={{
+                                transformOrigin:
+                                    placement === 'bottom-start' ? 'left top' : 'left bottom',
+                            }}
+                        >
+                            <Paper>
+                                <ClickAwayListener onClickAway={handleClose}>
+                                    <MenuList
+                                        autoFocusItem={open}
+                                        id="composition-menu"
+                                        aria-labelledby="composition-button"
+                                        onKeyDown={handleListKeyDown}
+                                    >
+                                        <MenuItem sx={styles} onClick={handleClose}>Profile</MenuItem>
+                                        <MenuItem sx={styles} onClick={handleClose}>Settings</MenuItem>
+                                        <MenuItem sx={styles} onClick={handleClose}>Logout</MenuItem>
+                                    </MenuList>
+                                </ClickAwayListener>
+                            </Paper>
+                        </Grow>
+                    )}
+                </Popper>
+            </div>
+        </Stack>
+    );
 }
