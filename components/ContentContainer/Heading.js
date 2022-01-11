@@ -8,7 +8,7 @@ export default function Heading(props) {
         <Box
             display="flex"
             padding="27px 0"
-            maxWidth="500px"
+            maxWidth="700px"
             zIndex="10"
         >
             <Typography color={theme.palette.primary.main} variant="h2">{`${text}`}</Typography>

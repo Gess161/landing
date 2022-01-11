@@ -8,24 +8,31 @@ export default function Footer() {
     const theme = useTheme()
     return (
         <Box
-            display="flex"
-            flexDirection="row"
-            width="76.2%"
-            pb={10}
-            m="0 auto"
-            zIndex={10}
+            sx={{
+                display: "flex",
+                flexDirection: "row",
+                width: "76.2%",
+                pb: "80px",
+                m: "0 auto",
+                zIndex: 10,
+            }}
         >
             <Box
-                display="flex"
-                flex={2}
-                flexDirection={"row"}
+                sx={{
+                    display: "flex",
+                    flex: 2,
+                    flexDirection: "row",
+                    "@media(max-width:1180px)": {
+                        flex: 1
+                    }
+                }}
             >
                 <Box>
                     <Logo text="MNTN" />
                     <Box
                         maxWidth="300px"
                     >
-                        <Typography mt={5} color={theme.palette.primary.main} variant="body1">
+                        <Typography display={"flex"} mt={5} color={theme.palette.primary.main} variant="body1">
                             Get out there & discover your next slope, mountain & destination!
                         </Typography>
                     </Box>

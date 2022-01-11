@@ -25,11 +25,11 @@ a {
 {
   0%
   {
-    transform: translateX(0%);
+    transform: translateX(-85%);
   }
   100%
   {
-    transform: translateX(200%);
+    transform: translateX(130%);
   }
 }
 
@@ -37,11 +37,11 @@ a {
 {
   0%
   {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
   100%
   {
-    transform: translateX(150%);
+    transform: translateX(100%);
   }
 }
 

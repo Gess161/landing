@@ -11,7 +11,13 @@ const Content = (props) => {
             display="flex"
             flexDirection="column"
             position="relative"
-            p={17}
+            justifyContent={"center"}
+            p={15}
+            sx={{
+                "@media(max-width: 850px)": {
+                    padding: 0
+                }
+            }}
         >
             <Box
                 fontSize="240px"
@@ -25,11 +31,16 @@ const Content = (props) => {
                 {count}
             </Box>
             <Tagline text={tagline} />
-            <Heading text={heading} />
+            <Box
+                maxWidth="620px"
+            >
+                <Heading text={heading} />
+            </Box>
+
             <Box
                 display="flex"
                 pb="27px"
-                maxWidth="500px"
+                maxWidth="620px"
             >
                 <Typography lineHeight="32px" color={theme.palette.primary.main} variant="body1">{text}</Typography>
             </Box>

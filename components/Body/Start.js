@@ -9,19 +9,29 @@ export default function Start() {
         <Box
             display={"flex"}
             flexDirection={"column"}
-
+            height="300px"
+            width="60%"
+            maxWidth="700px"
         >
             <Tagline text="A hiking guide" />
-            <Heading text="Be Prepared For The Mountains And Beyond!" />
+            <Box
+                sx={{
+                    display: "flex",
+                    width: "100%",
+                    height: "400px"
+                }}
+            >
+                <Heading text="Be Prepared For The Mountains And Beyond!" />
+            </Box>
             <Button
                 variant="text"
                 sx={{
-                    zIndex: 2,
+                    zIndex: 10,
                     width: "120px",
                     p: 0,
                     m: 0,
                     textTransform: "none",
-                    ".MuiButton-endIcon": { ml: 2}
+                    ".MuiButton-endIcon": { ml: 2 }
                 }}
                 color="primary"
                 mr={1}

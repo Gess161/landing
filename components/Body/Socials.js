@@ -1,24 +1,34 @@
-import { Typography } from "@mui/material";
+import { IconButton, Box, Typography } from "@mui/material";
 import Image from "next/image";
+
+
 
 export default function Socials() {
     return (
         <Box
+            position="fixed"
+            left="-4%"
+            top="55%"
             display="flex"
             flexDirection="row"
-            transform="rotate(90deg)"
             justifyContent="space-between"
             alignItems="center"
             maxWidth="300px"
             width="100%"
+            zIndex={10}
+
+            sx={{
+                transform: "rotate(90deg)"
+            }}
         >
-            <Typography variant="body1">Follow us</Typography>
-            <Box width="24px" height="24px">
-                <Image src="/instagram.svg" />
-            </Box>
-            <Box width="24px" height="24px">
-                <Image src="/twitter.svg" />
-            </Box>
+            <Typography color="primary" variant="body1">Follow us</Typography>
+
+            <IconButton color="primary" aria-label="instagram">
+                <Image src="/instagram.svg" width="24px" height="24px" />
+            </IconButton>
+            <IconButton color="primary" aria-label="twitter">
+                <Image src="/twitter.svg" width="24px" height="24px" />
+            </IconButton>
         </Box>
     )
 }
