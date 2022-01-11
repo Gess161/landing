@@ -9,7 +9,8 @@ const theme = createTheme({
       main: '#FBD784',
     },
     background: {
-      default: "#0B1D26"
+      default: "#0B1D26",
+      paper: "transparent"
     },
   },
   typography: {
