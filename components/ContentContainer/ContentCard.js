@@ -8,7 +8,7 @@ const ContentCard = (props) => {
     return (
         <Box
             sx={{
-                width: "80%",
+                width: "72.8%",
                 display: "flex",
                 justifySelf: "center",
                 minHeight: "720px",

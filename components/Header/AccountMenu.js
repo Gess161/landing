@@ -77,7 +77,8 @@ export default function MenuListComposition() {
                                     placement === 'bottom-start' ? 'left top' : 'left bottom',
                             }}
                         >
-                            <Paper>
+                            <Paper sx={{ boxShadow: "none" }}
+                            >
                                 <ClickAwayListener onClickAway={handleClose}>
                                     <MenuList
                                         autoFocusItem={open}

@@ -6,7 +6,7 @@ export default function Socials() {
         <Box
             sx={{
                 position: "fixed",
-                left: "-4%",
+                left: "-3%",
                 top: "55%",
                 display: "flex",
                 flexDirection: "row",
@@ -16,6 +16,12 @@ export default function Socials() {
                 width: "100%",
                 zIndex: 10,
                 transform: "rotate(90deg)",
+                "@media(max-width: 900px)": {
+                    display: "none"
+                },
+                "@media(min-width: 2100px)": {
+                    left: 0
+                }
             }}
         >
             <Typography color="primary" variant="body1">Follow us</Typography>

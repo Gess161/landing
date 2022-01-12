@@ -2,28 +2,31 @@ import Start from "./Start"
 import { Box } from "@mui/material"
 import ContentCard from "../ContentContainer/ContentCard"
 import Socials from "./Socials"
+import Progress from "./Progress/"
+import { useEffect, useState } from "react"
 
 export default function Body() {
     return (
         <Box
             display="flex"
-            flexDirection={"column"}
-            justifyContent={"center"}
+            flexDirection="column"
+            justifyContent="center"
             width="100%"
             height="100%"
-        >   
+        >
+            <Progress />
             <Socials />
             <Box
                 mt="12.5%"
                 display="flex"
-                justifyContent={"center"}
+                justifyContent="center"
             >
                 <Start />
             </Box>
             <Box
                 mt={"32.3vw"}
                 sx={{
-                    "@media(max-width:850px)" : {
+                    "@media(max-width:900px)": {
                         mt: "280px"
                     }
                 }}
