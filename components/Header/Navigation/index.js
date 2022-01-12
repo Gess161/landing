@@ -11,6 +11,11 @@ export default function Navigation() {
             maxWidth="300px"
             justifyContent="space-between"
             zIndex="10"
+            sx={{
+                "@media(max-width: 600px)":{
+                    display: "none"
+                }
+            }}
         >
             <NavItem item="Equipment" />
             <NavItem item="About us" />

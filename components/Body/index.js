@@ -4,6 +4,7 @@ import ContentCard from "../ContentContainer/ContentCard"
 import Socials from "./Socials"
 import Progress from "./Progress/"
 import { useEffect, useState } from "react"
+import BurgerButton from "../BurgerButton"
 
 export default function Body() {
     return (
@@ -17,6 +18,8 @@ export default function Body() {
             <Progress />
             <Socials />
             <Box
+                width="100%"
+                height="100%"
                 mt="12.5%"
                 display="flex"
                 justifyContent="center"
@@ -27,8 +30,11 @@ export default function Body() {
                 mt={"32.3vw"}
                 sx={{
                     "@media(max-width:900px)": {
-                        mt: "280px"
-                    }
+                        mt: 35
+                    },
+                    "@media(max-width:600px)": {
+                        mt: 10
+                    },
                 }}
             >
                 <ContentCard image={"/01.png"} text="Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker? " tagline="get started" heading="What level of hiker are you?" count={1} />

@@ -10,6 +10,12 @@ export default function Heading(props) {
             padding="27px 0"
             maxWidth="700px"
             zIndex="10"
+            sx={{
+                "@media(max-width: 600px)":{
+                    pt: 4,
+                    height: "400px"
+                }
+            }}
         >
             <Typography color={theme.palette.primary.main} variant="h2">{`${text}`}</Typography>
         </Box>

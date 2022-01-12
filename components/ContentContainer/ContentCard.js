@@ -17,11 +17,7 @@ const ContentCard = (props) => {
                 mb: "200px",
                 flexDirection: direction,
                 zIndex: 10,
-                "@media(max-width: 1180px)": {
-                    flexDirection: "column",
-                    height: "1400px",
-                    mb: "50px"
-                }
+                ...mediaCard
             }}
         >
             <Box
@@ -59,11 +55,26 @@ const mediaImage = {
         height: "50%",
         justifyContent: "center"
     },
+    "@media(max-width: 600px)": {
+        height: "400px",
+    }
 }
 
 const mediaText = {
     "@media(max-width: 1180px)": {
         width: "100%",
-        height: "50%"
+        height: "50%",
+        p: 0,
     },
+}
+
+const mediaCard = {
+    "@media(max-width: 1180px)": {
+        flexDirection: "column",
+        height: "1300px",
+        mb: "50px"
+    },
+    "@media(max-width: 600px)": {
+        justifyContent: "space-around"
+    }
 }

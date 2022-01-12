@@ -11,9 +11,10 @@ export default function Start() {
             height="300px"
             width="60%"
             maxWidth="700px"
+            sx={{ ...startMedia }}
         >
             <Tagline text="A hiking guide" />
-            <Box display="flex" width="100%" height="400px" >
+            <Box display="flex" width="100%" height="400px" sx={{...headingMedia}} >
                 <Heading text="Be Prepared For The Mountains And Beyond!" />
             </Box>
             <Button
@@ -36,4 +37,17 @@ const buttonStyles = {
     m: 0,
     textTransform: "none",
     ".MuiButton-endIcon": { ml: 2 }
+}
+
+const startMedia = {
+    "@media(max-width: 600px)": {
+        width: "80%",
+        height: "700px",
+    }
+}
+
+const headingMedia = {
+    "@media(max-width: 600px)": {
+        mb: 14
+    }
 }

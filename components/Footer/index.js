@@ -15,6 +15,7 @@ export default function Footer() {
                 pb: "80px",
                 m: "0 auto",
                 zIndex: 10,
+                ...mediaFooter
             }}
         >
             <Box
@@ -30,7 +31,7 @@ export default function Footer() {
                 <Box>
                     <Logo text="MNTN" />
                     <Box maxWidth="300px">
-                        <Typography display={"flex"} mt={5} color={theme.palette.primary.main} variant="body1">
+                        <Typography sx={{...mediaTypo}} mt={5} color={theme.palette.primary.main} variant="body1">
                             Get out there & discover your next slope, mountain & destination!
                         </Typography>
                     </Box>
@@ -42,4 +43,21 @@ export default function Footer() {
             </Box>
         </Box>
     )
+}
+
+const mediaFooter = {
+    "@media(max-width:600px)": {
+        flexDirection: "column",
+        justifyContent: "space-around",
+        width: "100%",
+        p: 2
+    }
+}
+
+const mediaTypo = {
+    "@media(max-width:600px)": {
+        m: 0,
+        pt: 2,
+        pb: 2
+    }
 }
