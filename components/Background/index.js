@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import { height } from "@mui/system";
 import Image from "next/image";
 import Clouds from "./Clouds";
 
@@ -87,9 +88,11 @@ const mediaBg = {
 
 const mediaShadow = {
     "@media(max-width: 900px)": {
-        bottom: "400px"
+        bottom: "400px",
+        height: "250px"
     },
     "@media(max-width: 600px)": {
-        bottom: "730px"
-    }
+        bottom: "730px",
+        height: "250px"
+    },
 }
