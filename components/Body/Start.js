@@ -3,7 +3,8 @@ import Tagline from "../ContentContainer/Tagline"
 import { Box, Button } from "@mui/material"
 import Image from "next/image"
 
-export default function Start() {
+export default function Start(props) {
+    const { scrollTo } = props;
     return (
         <Box
             sx={{
@@ -25,6 +26,7 @@ export default function Start() {
                 endIcon={<Image src="/arrowdownward.png" width="16px" height="24px" />}
                 mr={1}
                 sx={buttonStyles}
+                onClick={scrollTo}
             >
                 scroll down
             </Button>

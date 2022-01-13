@@ -1,9 +1,10 @@
+import * as React from "react"
 import { Box } from "@mui/material";
 import Image from "next/image"
 import Content from "./Content";
 
 const ContentCard = (props) => {
-    const { image, tagline, heading, text, count, direction } = props;
+    const { image, tagline, heading, text, count, direction, forwardedRef } = props;
 
     return (
         <Box // main container
@@ -19,7 +20,8 @@ const ContentCard = (props) => {
                 zIndex: 10,
                 ...mediaCard
             }}
-        >
+            ref={forwardedRef}
+        >   
             <Box // text container
                 display="flex"
                 width="61%"

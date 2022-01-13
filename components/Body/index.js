@@ -1,3 +1,4 @@
+import * as React from "react"
 import Start from "./Start"
 import { Box } from "@mui/material"
 import ContentCard from "../ContentContainer/ContentCard"
@@ -5,6 +6,8 @@ import Socials from "./Socials"
 import Progress from "./Progress/"
 
 export default function Body() {
+    const cardRef = React.useRef(null)
+    const scrollToCard = () => cardRef.current.scrollIntoView({ behavior: "smooth" })
     return (
         <Box
             sx={{
@@ -26,13 +29,14 @@ export default function Body() {
                     justifyContent: "center",
                 }}
             >
-                <Start />
+                <Start scrollTo={scrollToCard} />
             </Box>
             <Box
                 mt={"32.3vw"}
                 sx={mediaContentCards}
             >
                 <ContentCard
+                    forwardedRef={cardRef}
                     image={"/01.png"}
                     tagline="get started"
                     heading="What level of hiker are you?"
