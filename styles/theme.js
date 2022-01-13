@@ -23,23 +23,59 @@ const theme = createTheme({
     fontWeightRegular: 400,
     fontWeightMedium: 500,
     fontWeightBold: 700,
+    button: {
+      '@media (min-width:2100px)': {
+        fontSize: '1.75rem',
+      },
+    },
+    h3: {
+      lineHeight: "32px",
+      fontWeight: 600,
+      fontSize: "2rem",
+      '@media (max-width:600px)': {
+        fontSize: '1.5rem',
+      },
+      '@media (min-width:2100px)': {
+        fontSize: '3rem',
+        lineHeight: "40px"
+      },
+    },
     h2: {
       fontWeight: 500,
       color: "#FFF",
       fontSize: "4rem",
-      fontFamily: '"Playfair-Display',
-      lineHeight: "76.8px"
+      fontFamily: '"Playfair-Display"',
+      lineHeight: "76.8px",
+      '@media (max-width:600px)': {
+        fontSize: "3rem",
+      },
+      '@media (min-width:2100px)': {
+        fontSize: '6rem',
+      },
     },
     h6: {
       fontWeight: 800,
       letterSpacing: "6px",
       textTransform: "uppercase",
-      fontSize: "18px"
+      fontSize: "18px",
+      '@media (max-width:600px)': {
+        fontSize: '0.75rem',
+      },
+      '@media (min-width:2100px)': {
+        fontSize: '1.75rem',
+      },
     },
     body1: {
       lineHeight: "32px",
       fontWeight: 600,
-      fontSize: "18px"
+      fontSize: "18px",
+      '@media (max-width:600px)': {
+        fontSize: '1rem',
+      },
+      '@media (min-width:2100px)': {
+        fontSize: '1.75rem',
+        lineHeight: "40px"
+      },
     },
   }
 });

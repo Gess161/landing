@@ -4,19 +4,19 @@ import Clouds from "./Clouds";
 
 export default function Background() {
     return (
-        <Box
-            sx={{
-                position:"absolute",
-                width:"100%",
-                height:"100%",
-                minHeight:"1440px",
-                "@media(max-width:1180px)": {
-                    minHeight: "1000px"
-                }
+        <Box //background container
+            sx={{ 
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                minHeight: "1440px",
+                "@media(min-width: 2100px)": {
+                    height: "200%"
+                },
             }}
         >
-            <Box
-                sx={{
+            <Box //container shadow
+                sx={{ 
                     display: "flex",
                     width: "100%",
                     height: "100%",
@@ -26,41 +26,70 @@ export default function Background() {
                 }}
             />
             <Clouds />
-            <Box
-                sx={{
+            <Box //container bottom shadow
+                sx={{ 
                     zIndex: 1,
                     height: "200px",
                     width: "100%",
                     position: "absolute",
                     bottom: '-5px',
-                    background: "linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);"
+                    background: "linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);",
+                    ...mediaShadow
                 }}
             />
-            <Box
-                position="absolute"
-                width="100%"
-                height="100%"
-                top='0'
-                left='0'
-                overflow="hidden"
+            <Box //background images
+                sx={{
+                    position: "absolute",
+                    width: "100%",
+                    height: "100%",
+                    top: '0',
+                    left: '0',
+                    overflow: "hidden",
+                }}
             >
-                <Box
-                    width="100%"
-                    height="100%"
-                    position="absolute"
-                    top="18.2vw"
+                <Box //mountains
+                    sx={{
+                        width: "100%",
+                        height: "100%",
+                        position: "absolute",
+                        top: "18.2vw",
+                        ...mediaBg
+                    }}
+
                 >
                     <Image layout="fill" src="/mnt.png" priority />
                 </Box>
-                <Box
-                    width="100%"
-                    height="80%"
-                    position="absolute"
-                    top="33.85vw"
+                <Box  //hill
+                    sx={{
+                        width: "100%",
+                        height: "80%",
+                        position: "absolute",
+                        top: "33.85vw",
+                        ...mediaBg
+                    }}
                 >
                     <Image layout="fill" src="/hill.png" priority />
                 </Box>
             </Box>
         </Box>
     )
+}
+
+
+const mediaBg = {
+    "@media(max-width: 900px)": {
+        height: "50%"
+    },
+    "@media(max-width: 600px)": {
+        height: "35%"
+    }
+}
+
+const mediaShadow = {
+    "@media(max-width: 900px)": {
+        bottom: "400px"
+    },
+    "@media(max-width: 600px)": {
+        bottom: "730px"
+    }
 }

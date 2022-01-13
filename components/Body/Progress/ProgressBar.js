@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-import { styled, useTheme } from '@mui/system';
+import { styled } from '@mui/system';
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   borderRadius: 5,
@@ -16,7 +16,6 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 
 export default function ProgressBar() {
   const [progress, setProgress] = React.useState(0);
-  const theme = useTheme()
   const ticking = React.useRef(false)
 
   React.useEffect(() => {

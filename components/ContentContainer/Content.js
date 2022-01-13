@@ -36,9 +36,8 @@ const Content = (props) => {
             <Box maxWidth="620px">
                 <Heading text={heading} />
             </Box>
-
             <Box display="flex" pb="27px" maxWidth="620px">
-                <Typography lineHeight="32px" color={theme.palette.primary.main} variant="body1">{text}</Typography>
+                <Typography color={theme.palette.primary.main} variant="body1">{text}</Typography>
             </Box>
             <Box
                 display="flex"

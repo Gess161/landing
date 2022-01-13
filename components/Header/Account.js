@@ -7,12 +7,10 @@ import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
-import { useTheme } from '@mui/system';
 import Image from "next/image"
 import { styled } from '@mui/material';
 
 export default function MenuListComposition() {
-    const theme = useTheme()
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
     
@@ -48,7 +46,14 @@ export default function MenuListComposition() {
         <Stack direction="row" spacing={2}>
             <div>
                 <Button
-                    sx={{ p: 0, alignItems: "center", zIndex: 10, alignItems: "center", textTransform: 'none', fontWeight: 700 }}
+                    sx={{ 
+                        p: 0, 
+                        alignItems: "center", 
+                        zIndex: 10, 
+                        alignItems: "center", 
+                        textTransform: 'none', 
+                        fontWeight: 700 
+                    }}
                     ref={anchorRef}
                     id="composition-button"
                     aria-controls={open ? 'composition-menu' : undefined}

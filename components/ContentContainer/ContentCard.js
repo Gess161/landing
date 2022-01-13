@@ -6,7 +6,7 @@ const ContentCard = (props) => {
     const { image, tagline, heading, text, count, direction } = props;
 
     return (
-        <Box
+        <Box // main container
             sx={{
                 width: "72.8%",
                 display: "flex",
@@ -20,7 +20,7 @@ const ContentCard = (props) => {
                 ...mediaCard
             }}
         >
-            <Box
+            <Box // text container
                 display="flex"
                 width="61%"
                 zIndex={10}
@@ -35,7 +35,7 @@ const ContentCard = (props) => {
                     count={"0" + count}
                 />
             </Box>
-            <Box
+            <Box // image container
                 display="flex"
                 width="39%"
                 zIndex={10}

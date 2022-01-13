@@ -21,15 +21,15 @@ a {
   box-sizing: border-box;
 }
 
-@keyframes animatemid
+@keyframes animateStart
 {
   0%
   {
-    transform: translateX(-85%);
+    transform: translateX(-20%);
   }
   100%
   {
-    transform: translateX(130%);
+    transform: translateX(200%);
   }
 }
 

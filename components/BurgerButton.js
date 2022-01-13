@@ -4,6 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { styled } from "@mui/system";
 import NavItem from "./Header/Navigation/NavItem";
 import Account from "./Header/Account.js"
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export default function BurgerButton() {
     const [menuOpen, setOpen] = React.useState(false)
@@ -21,17 +22,26 @@ export default function BurgerButton() {
 
     return (
         <Hidden smUp>
-            <StyledButton color="primary">
+            <StyledButton
+                onClick={toggleDrawer("right", false)}
+                color="primary"
+            >
                 <MenuIcon />
             </StyledButton>
             <StyledDrawer
                 role="presentation"
                 anchor="right"
-                onClick={toggleDrawer("right", false)}
-                onKeyDown={toggleDrawer("right", false)}
-                open={false}
-                color="#fff"
+                onOpen={toggleDrawer("right", false)}
+                onClose={toggleDrawer("right", false)}
+                open={menuOpen}
             >
+                <StyledButton
+                    onClick={toggleDrawer("right", false)}
+                    color="primary"
+                    sx={{ alignSelf: "flex-start", p: 4 }}
+                >
+                    <ArrowForwardIosIcon fontSize="small" />
+                </StyledButton>
                 <Box sx={{ p: 4 }}>
                     <NavItem item="Equipment" />
                 </Box>

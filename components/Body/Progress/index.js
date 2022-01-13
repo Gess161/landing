@@ -3,19 +3,14 @@ import { Box, Typography } from "@mui/material";
 
 export default function Progress(props) {
     return (
-        <Box 
+        <Box
             sx={{
                 width: '100%',
                 position: "fixed",
                 right: "-4.5%",
                 top: "55%",
                 zIndex: 10,
-                "@media(max-width: 900px)": {
-                    display: "none"
-                },
-                "@media(min-width: 2100px)": {
-                    right: 0
-                }
+                ...mediaProgressBar
             }}
         >
             <Box
@@ -51,3 +46,14 @@ export default function Progress(props) {
     )
 }
 
+const mediaProgressBar = {
+    "@media(max-width: 900px)": {
+        display: "none"
+    },
+    "@media(max-width: 1180px)": {
+        right: "-6.5%"
+    },
+    "@media(min-width: 2100px)": {
+        right: 0
+    }
+}

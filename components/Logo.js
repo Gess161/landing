@@ -10,7 +10,7 @@ export default function Logo(props) {
             display="flex"
             alignItems="center"
         >
-            <Typography color={theme.palette.primary.main} fontFamily="Playfair-Display" fontSize="32px">
+            <Typography color={theme.palette.primary.main} fontFamily="Playfair-Display" variant="h3">
                 {text}
             </Typography>
         </Box>

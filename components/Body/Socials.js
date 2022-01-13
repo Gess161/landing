@@ -16,12 +16,7 @@ export default function Socials() {
                 width: "100%",
                 zIndex: 10,
                 transform: "rotate(90deg)",
-                "@media(max-width: 900px)": {
-                    display: "none"
-                },
-                "@media(min-width: 2100px)": {
-                    left: 0
-                }
+                ...mediaSocials
             }}
         >
             <Typography color="primary" variant="body1">Follow us</Typography>
@@ -35,3 +30,12 @@ export default function Socials() {
         </Box>
     )
 }
+
+const mediaSocials = {
+    "@media(max-width: 900px)": {
+        display: "none"
+    },
+    "@media(min-width: 2100px)": {
+        left: 0
+    }
+}  

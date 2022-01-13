@@ -13,6 +13,7 @@ export default function Clouds() {
                 top: "0",
                 left: "0",
                 backgroundColor: "rgb(152, 191, 199);",
+                ...mediaBg
             }}
         >
             <Box
@@ -25,7 +26,10 @@ export default function Clouds() {
                 }}
             >
             </Box>
-            <Box sx={{ ...cloud, animation: "animatemid 120s linear infinite" }}>
+            <Box sx={{ ...cloud, animation: "animateStart 200s linear" }}>
+                <Image src={'/clouds/cloud1.png'} layout="fill" priority />
+            </Box>
+            <Box sx={{ ...cloud, animation: "animate 120s linear infinite" }}>
                 <Image src={'/clouds/cloud1.png'} layout="fill" />
             </Box>
             <Box sx={{ ...cloud, animation: "animate 140s linear infinite" }} >
@@ -34,7 +38,7 @@ export default function Clouds() {
             <Box sx={{ ...cloud, animation: "animate 200s linear infinite" }}>
                 <Image src={'/clouds/cloud3.png'} layout="fill" />
             </Box>
-            <Box sx={{ ...cloud, animation: "animatemid 280s linear infinite" }}>
+            <Box sx={{ ...cloud, animation: "animate 280s linear infinite" }}>
                 <Image src={'/clouds/cloud4.png'} layout="fill" />
             </Box>
             <Box sx={{ ...cloud, animation: "animate 350s linear infinite" }}>
@@ -50,4 +54,12 @@ const cloud = {
     width: "100%",
     height: "80%",
     position: "absolute",
+}
+const mediaBg = {
+    "@media(max-width: 900px)": {
+        height: "50%"
+    },
+    "@media(max-width: 600px)": {
+        height: "35%"
+    }
 }

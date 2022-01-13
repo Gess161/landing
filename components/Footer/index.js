@@ -31,7 +31,7 @@ export default function Footer() {
                 <Box>
                     <Logo text="MNTN" />
                     <Box maxWidth="300px">
-                        <Typography sx={{...mediaTypo}} mt={5} color={theme.palette.primary.main} variant="body1">
+                        <Typography sx={{ mt: 5, ...mediaTypo }} color={theme.palette.primary.main} variant="body1">
                             Get out there & discover your next slope, mountain & destination!
                         </Typography>
                     </Box>

@@ -6,23 +6,25 @@ import Image from "next/image"
 export default function Start() {
     return (
         <Box
-            display={"flex"}
-            flexDirection={"column"}
-            height="300px"
-            width="60%"
-            maxWidth="700px"
-            sx={{ ...startMedia }}
+            sx={{
+                display: "flex",
+                flexDirection: "column",
+                height: "300px",
+                width: "60%",
+                maxWidth: "700px",
+                ...startMedia
+            }}
         >
             <Tagline text="A hiking guide" />
-            <Box display="flex" width="100%" height="400px" sx={{...headingMedia}} >
+            <Box display="flex" width="100%" height="400px" >
                 <Heading text="Be Prepared For The Mountains And Beyond!" />
             </Box>
             <Button
-                variant="text"
-                sx={buttonStyles}
                 color="primary"
-                mr={1}
+                variant="text"
                 endIcon={<Image src="/arrowdownward.png" width="16px" height="24px" />}
+                mr={1}
+                sx={buttonStyles}
             >
                 scroll down
             </Button>
@@ -32,7 +34,7 @@ export default function Start() {
 
 const buttonStyles = {
     zIndex: 10,
-    width: "120px",
+    width: "200px",
     p: 0,
     m: 0,
     textTransform: "none",
@@ -43,11 +45,5 @@ const startMedia = {
     "@media(max-width: 600px)": {
         width: "80%",
         height: "700px",
-    }
-}
-
-const headingMedia = {
-    "@media(max-width: 600px)": {
-        mb: 14
     }
 }
