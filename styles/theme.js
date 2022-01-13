@@ -48,6 +48,7 @@ const theme = createTheme({
       lineHeight: "76.8px",
       '@media (max-width:600px)': {
         fontSize: "3rem",
+        lineHeight: "60.8px",
       },
       '@media (min-width:2100px)': {
         fontSize: '6rem',
