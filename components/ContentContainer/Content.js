@@ -27,7 +27,10 @@ const Content = (props) => {
                     top: "0",
                     left: "0",
                     color: theme.palette.primary.main,
-                    opacity: 0.1 
+                    opacity: 0.1 ,
+                    "@media(max-width:600px)": {
+                        fontSize: "200px"
+                    }
                 }}
             >
                 {count}
