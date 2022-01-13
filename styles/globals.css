@@ -61,19 +61,19 @@ a {
 
 @font-face {
   font-family: "Playfair-Display";
-  src: url("/fonts/PlayfaitDisplay/PlayfairDisplay-Regular.ttf");
+  src: url("/fonts/PlayfairDisplay/Regular.ttf");
   font-style: normal;
   font-weight: 400
 }
 @font-face {
   font-family: "Playfair-Display";
-  src: url("/fonts/PlayfaitDisplay/PlayfairDisplay-Medium.ttf");
+  src: url("/fonts/PlayfairDisplay/Medium.ttf");
   font-style: medium;
   font-weight: 500
 }
 @font-face {
   font-family: "Playfair-Display";
-  src: url("/fonts/PlayfaitDisplay/PlayfairDisplay-Bold.ttf");
+  src: url("/fonts/PlayfairDisplay/Bold.ttf");
   font-style: bold;
   font-weight: 700
 }
